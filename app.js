@@ -54,7 +54,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // Serving public asset
 app.use(mongoSanitize());
 
 const store=new MongoDBStore({
-    url:'mongodb://localhost:27017/yelp-camp',
+    url:dbUrl,
     secret:'thisshouldbeasecret',
     touchAfter: 24*60*60
 })
